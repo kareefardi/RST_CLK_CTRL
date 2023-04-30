@@ -22,10 +22,10 @@ set_clock_uncertainty 0.100 CLK
 
 set_propagated_clock [all_clocks]
 
-set_dont_touch {\rosc.BUF \rosc.ENABLE \rosc.INV_0 \rosc.INV_1 \rosc.MUX}
-set_dont_touch {\rosc.INV_CHAIN_2_0  \rosc.INV_CHAIN_2_1}
-set_dont_touch {\rosc.INV_CHAIN_4_0 \rosc.INV_CHAIN_4_1 \rosc.INV_CHAIN_4_2 \rosc.INV_CHAIN_4_3}
-set_dont_touch {\rosc.INV_CHAIN_6_0 \rosc.INV_CHAIN_6_1 \rosc.INV_CHAIN_6_2 \rosc.INV_CHAIN_6_3 \rosc.INV_CHAIN_6_4 \rosc.INV_CHAIN_6_5}
+#set_dont_touch {\rosc.BUF \rosc.ENABLE \rosc.INV_0 \rosc.INV_1 \rosc.MUX}
+#set_dont_touch {\rosc.INV_CHAIN_2_0  \rosc.INV_CHAIN_2_1}
+#set_dont_touch {\rosc.INV_CHAIN_4_0 \rosc.INV_CHAIN_4_1 \rosc.INV_CHAIN_4_2 \rosc.INV_CHAIN_4_3}
+#set_dont_touch {\rosc.INV_CHAIN_6_0 \rosc.INV_CHAIN_6_1 \rosc.INV_CHAIN_6_2 \rosc.INV_CHAIN_6_3 \rosc.INV_CHAIN_6_4 \rosc.INV_CHAIN_6_5}
 
 ###############################################################################
 # Environment
