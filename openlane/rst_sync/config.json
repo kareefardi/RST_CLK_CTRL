@@ -1,7 +1,6 @@
 {
     "DESIGN_NAME": "rst_sync",
     "VERILOG_FILES": "dir::../../src/rtl/*.v",
-    "FP_PDN_CORE_RING": true,
     "FP_CORE_UTIL": 20,
     "FP_ASPECT_RATIO": 0.6,
     "FP_PDN_AUTO_ADJUST": false,
@@ -30,5 +29,6 @@
     "FILL_CELL": "sky130_fd_sc_hs__fill*",
     "FP_IO_VLENGTH": "2",
     "FP_IO_HLENGTH": "2",
-    "FP_PDN_CFG": "dir::pdn.tcl"
+    "FP_PDN_CFG": "dir::pdn.tcl",
+    "FP_PDN_SKIPTRIM": true
 }

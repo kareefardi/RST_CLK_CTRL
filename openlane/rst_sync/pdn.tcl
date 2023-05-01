@@ -60,16 +60,8 @@ if { $::env(DESIGN_IS_CORE) == 1 } {
         -pitch $::env(FP_PDN_VPITCH) \
         -offset $::env(FP_PDN_VOFFSET) \
         -spacing $::env(FP_PDN_VSPACING) \
-        -starts_with POWER -extend_to_core_ring
-
-    add_pdn_stripe \
-        -grid stdcell_grid \
-        -layer $::env(FP_PDN_HORIZONTAL_LAYER) \
-        -width $::env(FP_PDN_HWIDTH) \
-        -pitch $::env(FP_PDN_HPITCH) \
-        -offset $::env(FP_PDN_HOFFSET) \
-        -spacing $::env(FP_PDN_HSPACING) \
-        -starts_with POWER -extend_to_core_ring
+        -starts_with POWER \
+        -extend_to_boundary
 
     add_pdn_connect \
         -grid stdcell_grid \
@@ -105,26 +97,6 @@ if { $::env(FP_PDN_ENABLE_RAILS) == 1 } {
         -layers "$::env(FP_PDN_RAIL_LAYER) $::env(FP_PDN_VERTICAL_LAYER)"
 }
 
-
-# Adds the core ring if enabled.
-add_pdn_ring \
-    -grid stdcell_grid \
-    -layers "met2 met3" \
-    -widths "$::env(FP_PDN_CORE_RING_VWIDTH) $::env(FP_PDN_CORE_RING_HWIDTH)" \
-    -spacings "$::env(FP_PDN_CORE_RING_VSPACING) $::env(FP_PDN_CORE_RING_HSPACING)" \
-    -core_offset "$::env(FP_PDN_CORE_RING_VOFFSET) $::env(FP_PDN_CORE_RING_HOFFSET)"
-
-add_pdn_connect \
-    -grid stdcell_grid \
-    -layers "met2 met5"
-
-add_pdn_connect \
-    -grid stdcell_grid \
-    -layers "met2 met3"
-
-add_pdn_connect \
-    -grid stdcell_grid \
-    -layers "met3 met4"
 
 define_pdn_grid \
     -macro \
